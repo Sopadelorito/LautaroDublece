@@ -1659,3 +1659,252 @@ footer > p {
     }
 
 }
+/* =====================================================
+   MODO OSCURO
+===================================================== */
+
+.theme-toggle {
+    width: 44px;
+    height: 44px;
+
+    margin-left: 10px;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    background: var(--white);
+    color: var(--text);
+
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        background .25s,
+        color .25s,
+        transform .25s,
+        border-color .25s;
+}
+
+.theme-toggle:hover {
+    transform: rotate(15deg) scale(1.05);
+}
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+body.dark-mode {
+
+    --background: #101820;
+    --white: #18232d;
+
+    --text: #edf5f8;
+    --muted: #aab9c4;
+
+    --border: #30414d;
+
+    --navy: #f1f7fa;
+    --navy-2: #dceaf0;
+
+    background: var(--background);
+    color: var(--text);
+}
+
+
+/* HEADER */
+
+body.dark-mode .header {
+    background: rgba(16, 24, 32, .96);
+    border-bottom-color: var(--border);
+}
+
+body.dark-mode .logo {
+    color: #f1f7fa;
+}
+
+body.dark-mode .nav a,
+body.dark-mode .nav-comercio {
+    color: #b7c6cf;
+}
+
+body.dark-mode .nav a:hover,
+body.dark-mode .nav-comercio:hover {
+    color: var(--green);
+}
+
+
+/* BOTÓN MODO OSCURO */
+
+body.dark-mode .theme-toggle {
+    background: #24333e;
+    border-color: #40515d;
+    color: #ffffff;
+}
+
+
+/* HERO */
+
+body.dark-mode .hero-content > p {
+    color: #aab9c4;
+}
+
+body.dark-mode .badge {
+    background: #123b35;
+    color: #42e0ad;
+}
+
+body.dark-mode .btn-secondary {
+    background: #18232d;
+    border-color: #40515d;
+    color: #f1f7fa;
+}
+
+body.dark-mode .btn-secondary:hover {
+    background: #24333e;
+}
+
+
+/* SERVICES */
+
+body.dark-mode .section-heading h2 {
+    color: #f1f7fa;
+}
+
+body.dark-mode .section-heading p {
+    color: #aab9c4;
+}
+
+body.dark-mode .service-card {
+    background: #18232d;
+    border-color: #30414d;
+}
+
+body.dark-mode .service-card h3 {
+    color: #f1f7fa;
+}
+
+body.dark-mode .service-card > p {
+    color: #aab9c4;
+}
+
+body.dark-mode .service-card li {
+    color: #b8c7cf;
+}
+
+body.dark-mode .service-number {
+    color: #718591;
+}
+
+body.dark-mode .card-button {
+    color: #f1f7fa;
+}
+
+
+/* ICONOS DE SERVICIOS */
+
+body.dark-mode .auto-icon {
+    background: #1d3447;
+}
+
+body.dark-mode .moto-icon {
+    background: #453421;
+}
+
+body.dark-mode .hogar-icon {
+    background: #203a29;
+}
+
+body.dark-mode .vida-icon {
+    background: #432b38;
+}
+
+body.dark-mode .objetos-icon {
+    background: #302d4b;
+}
+
+body.dark-mode .comercio-icon {
+    background: #1d3935;
+}
+
+
+/* MODALES */
+
+body.dark-mode .modal {
+    background: #18232d;
+    color: #edf5f8;
+}
+
+body.dark-mode .close-modal {
+    background: #263640;
+    color: #ffffff;
+}
+
+body.dark-mode .close-modal:hover {
+    background: #354752;
+}
+
+
+/* FORMULARIOS */
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background: #111b23;
+    border-color: #3a4d59;
+    color: #edf5f8;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #71838f;
+}
+
+body.dark-mode .field label {
+    color: #edf5f8;
+}
+
+
+/* COMERCIO */
+
+body.dark-mode .comercio-item {
+    background: #18232d;
+    border-color: #30414d;
+}
+
+
+/* FOOTER */
+
+body.dark-mode footer {
+    background: #0b1218;
+}
+
+body.dark-mode footer > p {
+    color: #91a7b5;
+}
+
+body.dark-mode .footer-links a,
+body.dark-mode .footer-links span {
+    color: #b9c8d0;
+}
+
+
+/* TRANSICIÓN */
+
+body,
+.header,
+.service-card,
+.modal,
+.btn-secondary,
+.theme-toggle,
+input,
+select,
+textarea {
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+}
