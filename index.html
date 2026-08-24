@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JK Seguros | Seguros y Comercio Exterior</title>
+
+    <meta
+        name="description"
+        content="JK Seguros. Cotización de seguros para autos, motos, hogar, vida y objetos. Comercio exterior y logística."
+    >
+
+    <!-- MUY IMPORTANTE -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="header">
+
+        <a href="#inicio" class="logo">
+            <strong>JK</strong> SEGUROS
+        </a>
+
+        <nav class="nav">
+
+            <a href="#inicio">Inicio</a>
+
+            <a href="#seguros">Seguros</a>
+
+            <a href="#nosotros">Nosotros</a>
+
+            <button
+                type="button"
+                class="nav-comercio"
+                id="btnComercio"
+            >
+                Comercio Exterior
+            </button>
+
+        </nav>
+
+        <button
+            type="button"
+            class="btn-whatsapp"
+            onclick="abrirWhatsApp('Consulta general')"
+        >
+            WhatsApp
+        </button>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                ASESORAMIENTO PERSONALIZADO
+            </div>
+
+            <h1>
+                Seguros simples.
+                <span>Protección real.</span>
+            </h1>
+
+            <p>
+                Encontrá la cobertura que necesitás para tu auto,
+                moto, hogar, vida, objetos y empresa.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#seguros"
+                    class="btn-primary"
+                >
+                    Ver seguros
+                </a>
+
+                <button
+                    type="button"
+                    class="btn-secondary"
+                    onclick="abrirWhatsApp('Consulta general')"
+                >
+                    Consultar por WhatsApp
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-panel">
+
+            <div class="panel-top">
+
+                <div class="panel-icon">
+                    🛡️
+                </div>
+
+                <span>
+                    COTIZÁ RÁPIDO
+                </span>
+
+            </div>
+
+            <h2>
+                ¿Qué querés asegurar?
+            </h2>
+
+            <p>
+                Elegí una opción y te llevamos directamente
+                a la consulta.
+            </p>
+
+            <div class="quick-options">
+
+                <button onclick="abrirCotizacion('Auto')">
+                    <span>🚗</span>
+                    <b>Auto</b>
+                </button>
+
+                <button onclick="abrirCotizacion('Moto')">
+                    <span>🏍️</span>
+                    <b>Moto</b>
+                </button>
+
+                <button onclick="abrirCotizacion('Hogar')">
+                    <span>🏠</span>
+                    <b>Hogar</b>
+                </button>
+
+                <button onclick="abrirCotizacion('Seguro de Vida')">
+                    <span>❤️</span>
+                    <b>Vida</b>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SEGUROS
+    ====================================================== -->
+
+    <main id="seguros">
+
+        <section class="services">
+
+            <div class="section-heading">
+
+                <span>
+                    NUESTROS SERVICIOS
+                </span>
+
+                <h2>
+                    Elegí qué necesitás asegurar
+                </h2>
+
+                <p>
+                    Seleccioná una categoría para comenzar
+                    tu cotización.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+
+                <!-- AUTO -->
+
+                <article class="service-card">
+
+                    <div class="service-icon auto-icon">
+                        🚗
+                    </div>
+
+                    <div class="service-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Auto
+                    </h3>
+
+                    <p>
+                        Protección para tu vehículo ante
+                        accidentes, robo y otros riesgos.
+                    </p>
+
+                    <ul>
+                        <li>Responsabilidad civil</li>
+                        <li>Robo e incendio</li>
+                        <li>Granizo</li>
+                        <li>Asistencia</li>
+                    </ul>
+
+                    <button
+                        onclick="abrirCotizacion('Auto')"
+                        class="card-button"
+                    >
+                        Cotizar Auto
+                        <span>→</span>
+                    </button>
+
+                </article>
+
+
+                <!-- MOTO -->
+
+                <article class="service-card">
+
+                    <div class="service-icon moto-icon">
+                        🏍️
+                    </div>
+
+                    <div class="service-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Moto
+                    </h3>
+
+                    <p>
+                        Cobertura para motos y asistencia
+                        para circular con tranquilidad.
+                    </p>
+
+                    <ul>
+                        <li>Responsabilidad civil</li>
+                        <li>Robo</li>
+                        <li>Accidentes</li>
+                        <li>Asistencia</li>
+                    </ul>
+
+                    <button
+                        onclick="abrirCotizacion('Moto')"
+                        class="card-button"
+                    >
+                        Cotizar Moto
+                        <span>→</span>
+                    </button>
+
+                </article>
+
+
+                <!-- HOGAR -->
+
+                <article class="service-card">
+
+                    <div class="service-icon hogar-icon">
+                        🏠
+                    </div>
+
+                    <div class="service-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Hogar
+                    </h3>
+
+                    <p>
+                        Protegé tu vivienda, muebles y bienes
+                        ante diferentes imprevistos.
+                    </p>
+
+                    <ul>
+                        <li>Incendio</li>
+                        <li>Robo</li>
+                        <li>Daños por agua</li>
+                        <li>Responsabilidad civil</li>
+                    </ul>
+
+                    <button
+                        onclick="abrirCotizacion('Hogar')"
+                        class="card-button"
+                    >
+                        Cotizar Hogar
+                        <span>→</span>
+                    </button>
+
+                </article>
+
+
+                <!-- VIDA -->
+
+                <article class="service-card">
+
+                    <div class="service-icon vida-icon">
+                        ❤️
+                    </div>
+
+                    <div class="service-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Vida
+                    </h3>
+
+                    <p>
+                        Opciones para protegerte y proteger
+                        económicamente a tu familia.
+                    </p>
+
+                    <ul>
+                        <li>Seguro de vida</li>
+                        <li>Protección familiar</li>
+                        <li>Ahorro</li>
+                        <li>Planes personalizados</li>
+                    </ul>
+
+                    <button
+                        onclick="abrirCotizacion('Seguro de Vida')"
+                        class="card-button"
+                    >
+                        Cotizar Vida
+                        <span>→</span>
+                    </button>
+
+                </article>
+
+
+                <!-- OBJETOS -->
+
+                <article class="service-card">
+
+                    <div class="service-icon objetos-icon">
+                        💎
+                    </div>
+
+                    <div class="service-number">
+                        05
+                    </div>
+
+                    <h3>
+                        Objetos
+                    </h3>
+
+                    <p>
+                        Valoración y cobertura de objetos
+                        personales y bienes de valor.
+                    </p>
+
+                    <ul>
+                        <li>Electrónica</li>
+                        <li>Objetos personales</li>
+                        <li>Equipamiento</li>
+                        <li>Bienes de valor</li>
+                    </ul>
+
+                    <button
+                        onclick="abrirCotizacion('Valoración de objetos')"
+                        class="card-button"
+                    >
+                        Valorar objeto
+                        <span>→</span>
+                    </button>
+
+                </article>
+
+
+                <!-- COMERCIO -->
+
+                <article class="service-card">
+
+                    <div class="service-icon comercio-icon">
+                        🏢
+                    </div>
+
+                    <div class="service-number">
+                        06
+                    </div>
+
+                    <h3>
+                        Comercio y Empresa
+                    </h3>
+
+                    <p>
+                        Soluciones para comercios, empresas
+                        y actividades profesionales.
+                    </p>
+
+                    <ul>
+                        <li>Incendio</li>
+                        <li>Robo</li>
+                        <li>Responsabilidad civil</li>
+                        <li>Equipamiento</li>
+                    </ul>
+
+                    <button
+                        onclick="abrirCotizacion('Comercio y Empresa')"
+                        class="card-button"
+                    >
+                        Consultar
+                        <span>→</span>
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         NOSOTROS
+    ====================================================== -->
+
+    <section class="about" id="nosotros">
+
+        <div class="about-content">
+
+            <span>
+                ASESORAMIENTO
+            </span>
+
+            <h2>
+                Una forma más fácil de contratar seguros.
+            </h2>
+
+            <p>
+                Te ayudamos a encontrar la alternativa que
+                mejor se adapte a lo que necesitás, con
+                atención personalizada.
+            </p>
+
+        </div>
+
+        <div class="about-steps">
+
+            <div>
+                <strong>01</strong>
+                <p>Elegís</p>
+            </div>
+
+            <div>
+                <strong>02</strong>
+                <p>Completás</p>
+            </div>
+
+            <div>
+                <strong>03</strong>
+                <p>WhatsApp</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MODAL COMERCIO EXTERIOR
+    ====================================================== -->
+
+    <div
+        class="modal-overlay"
+        id="modalComercio"
+    >
+
+        <div class="modal comercio-modal">
+
+            <button
+                type="button"
+                class="close-modal"
+                id="cerrarComercio"
+            >
+                ×
+            </button>
+
+            <div class="comercio-title">
+
+                <div class="big-modal-icon">
+                    🌎
+                </div>
+
+                <div>
+
+                    <span>
+                        SERVICIOS EMPRESARIALES
+                    </span>
+
+                    <h2>
+                        Comercio Exterior
+                        <br>
+                        & Logística
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <p class="modal-intro">
+                Asesoramiento y servicios para operaciones
+                de comercio exterior, aduana, transporte,
+                logística y seguros.
+            </p>
+
+
+            <div class="exterior-services">
+
+
+                <div class="exterior-card">
+
+                    <div class="exterior-icon">
+                        📦
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Despachante de Aduana
+                        </h3>
+
+                        <p>
+                            Gestión y asesoramiento de
+                            operaciones aduaneras.
+                        </p>
+
+                    </div>
+
+                    <button
+                        onclick="abrirWhatsApp('Despachante de Aduana')"
+                    >
+                        Consultar
+                    </button>
+
+                </div>
+
+
+                <div class="exterior-card">
+
+                    <div class="exterior-icon">
+                        🚢
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Agente de Transporte Aduanero
+                        </h3>
+
+                        <p>
+                            Gestión y coordinación del
+                            transporte internacional.
+                        </p>
+
+                    </div>
+
+                    <button
+                        onclick="abrirWhatsApp('Agente de Transporte Aduanero')"
+                    >
+                        Consultar
+                    </button>
+
+                </div>
+
+
+                <div class="exterior-card">
+
+                    <div class="exterior-icon">
+                        🛡️
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Productor Asesor de Seguros
+                        </h3>
+
+                        <p>
+                            Asesoramiento y cotización
+                            de seguros.
+                        </p>
+
+                    </div>
+
+                    <button
+                        onclick="abrirWhatsApp('Productor Asesor de Seguros')"
+                    >
+                        Consultar
+                    </button>
+
+                </div>
+
+
+                <div class="exterior-card">
+
+                    <div class="exterior-icon">
+                        🚚
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Logística
+                        </h3>
+
+                        <p>
+                            Soluciones para transporte y
+                            operaciones de comercio exterior.
+                        </p>
+
+                    </div>
+
+                    <button
+                        onclick="abrirWhatsApp('Logística')"
+                    >
+                        Consultar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <h3>
+                    Contacto
+                </h3>
+
+                <a href="mailto:juankdublecenettol@gmail.com">
+                    ✉️ juankdublecenettol@gmail.com
+                </a>
+
+                <a href="tel:+543557622303">
+                    ☎️ 3557-622303
+                </a>
+
+                <a href="tel:+543765297561">
+                    ☎️ 3765-297561
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MODAL COTIZACIÓN
+    ====================================================== -->
+
+    <div
+        class="modal-overlay"
+        id="modalCotizacion"
+    >
+
+        <div class="modal quote-modal">
+
+            <button
+                type="button"
+                class="close-modal"
+                onclick="cerrarCotizacion()"
+            >
+                ×
+            </button>
+
+            <div class="quote-icon">
+                💬
+            </div>
+
+            <span class="quote-label">
+                SOLICITAR COTIZACIÓN
+            </span>
+
+            <h2>
+                Vamos a preparar tu consulta
+            </h2>
+
+            <p>
+                Seleccionaste:
+            </p>
+
+            <div
+                class="selected-type"
+                id="tipoSeleccionado"
+            >
+                -
+            </div>
+
+
+            <!-- CAMPOS DINÁMICOS -->
+
+            <div id="camposVehiculo" class="dynamic-fields">
+
+                <div class="field">
+
+                    <label for="vehiculoMarca">
+                        Marca
+                    </label>
+
+                    <select id="vehiculoMarca">
+                        <option value="">
+                            Seleccioná una marca
+                        </option>
+                    </select>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="vehiculoModelo">
+                        Modelo
+                    </label>
+
+                    <select id="vehiculoModelo">
+                        <option value="">
+                            Primero seleccioná la marca
+                        </option>
+                    </select>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="vehiculoAnio">
+                        Año
+                    </label>
+
+                    <select id="vehiculoAnio">
+                        <option value="">
+                            Seleccioná el año
+                        </option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="campoPersona"
+                class="field hidden"
+            >
+
+                <label for="datosPersona">
+                    Datos
+                </label>
+
+                <input
+                    id="datosPersona"
+                    type="text"
+                    placeholder="Ej: persona de 35 años"
+                >
+
+            </div>
+
+
+            <div
+                id="campoObjeto"
+                class="field hidden"
+            >
+
+                <label for="datosObjeto">
+                    Objeto a valorar
+                </label>
+
+                <input
+                    id="datosObjeto"
+                    type="text"
+                    placeholder="Ej: notebook, celular, herramienta..."
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="datosExtra">
+                    Información adicional
+                    <small>(opcional)</small>
+                </label>
+
+                <textarea
+                    id="datosExtra"
+                    placeholder="Agregá algún dato que quieras comentarnos..."
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="send-whatsapp"
+                onclick="enviarCotizacion()"
+            >
+                Enviar por WhatsApp
+            </button>
+
+            <small class="modal-note">
+                Se abrirá WhatsApp con tu consulta preparada.
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            <strong>JK</strong> SEGUROS
+        </div>
+
+        <p>
+            Seguros · Comercio Exterior · Logística
+        </p>
+
+        <div class="footer-links">
+
+            <a href="mailto:juankdublecenettol@gmail.com">
+                juankdublecenettol@gmail.com
+            </a>
+
+            <span>
+                3557-622303
+            </span>
+
+            <span>
+                3765-297561
+            </span>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 JK Seguros
+        </div>
+
+    </footer>
+
+
+    <!-- MUY IMPORTANTE -->
+    <script src="script.js"></script>
+
+</body>
+</html>
