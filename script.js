@@ -1282,7 +1282,53 @@ function limpiarTexto(texto) {
 
 }
 
+/* =====================================================
+   MODO OSCURO
+===================================================== */
 
+const themeToggle = document.getElementById("themeToggle");
+
+
+// Cargar el modo guardado
+const darkModeGuardado = localStorage.getItem("darkMode");
+
+if (darkModeGuardado === "true") {
+
+    document.body.classList.add("dark-mode");
+
+    themeToggle.textContent = "☀️";
+
+}
+
+
+// Cambiar modo al hacer clic
+themeToggle.addEventListener("click", function () {
+
+    document.body.classList.toggle("dark-mode");
+
+    const modoOscuroActivo =
+        document.body.classList.contains("dark-mode");
+
+
+    // Cambiar icono
+    if (modoOscuroActivo) {
+
+        themeToggle.textContent = "☀️";
+
+    } else {
+
+        themeToggle.textContent = "🌙";
+
+    }
+
+
+    // Guardar preferencia
+    localStorage.setItem(
+        "darkMode",
+        modoOscuroActivo
+    );
+
+});
 /* =========================================================
    FIN DEL SCRIPT
 ========================================================= */
