@@ -36,11 +36,9 @@
     padding: 0;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
-
 
 body {
 
@@ -57,21 +55,16 @@ body {
 
 }
 
-
 button,
 input,
 select,
 textarea {
-
     font-family: inherit;
-
 }
-
 
 button {
     cursor: pointer;
 }
-
 
 a {
     text-decoration: none;
@@ -107,7 +100,6 @@ a {
 
 }
 
-
 .logo {
 
     color: var(--navy);
@@ -120,13 +112,9 @@ a {
 
 }
 
-
 .logo strong {
-
     color: var(--green);
-
 }
-
 
 .nav {
 
@@ -137,7 +125,6 @@ a {
     gap: 30px;
 
 }
-
 
 .nav a,
 .nav-comercio {
@@ -150,14 +137,10 @@ a {
 
 }
 
-
 .nav a:hover,
 .nav-comercio:hover {
-
     color: var(--green);
-
 }
-
 
 .nav-comercio {
 
@@ -166,7 +149,6 @@ a {
     background: transparent;
 
 }
-
 
 .btn-whatsapp {
 
@@ -188,7 +170,6 @@ a {
         0 8px 20px rgba(18,206,145,.25);
 
 }
-
 
 .btn-whatsapp:hover {
 
@@ -224,7 +205,6 @@ a {
 
 }
 
-
 .badge {
 
     display: inline-block;
@@ -245,7 +225,6 @@ a {
 
 }
 
-
 .hero h1 {
 
     max-width: 700px;
@@ -263,13 +242,9 @@ a {
 
 }
 
-
 .hero h1 span {
-
     color: var(--green);
-
 }
-
 
 .hero-content > p {
 
@@ -283,7 +258,6 @@ a {
 
 }
 
-
 .hero-buttons {
 
     display: flex;
@@ -293,7 +267,6 @@ a {
     gap: 12px;
 
 }
-
 
 .btn-primary,
 .btn-secondary {
@@ -312,7 +285,6 @@ a {
 
 }
 
-
 .btn-primary {
 
     background: var(--navy);
@@ -320,7 +292,6 @@ a {
     color: white;
 
 }
-
 
 .btn-secondary {
 
@@ -332,23 +303,17 @@ a {
 
 }
 
-
 .btn-primary:hover {
-
     background: var(--navy-2);
-
 }
 
-
 .btn-secondary:hover {
-
     border-color: var(--green);
-
 }
 
 
 /* =====================================================
-   HERO PANEL CON IMAGEN
+   HERO PANEL
 ===================================================== */
 
 .hero-panel {
@@ -359,14 +324,10 @@ a {
 
     background:
         linear-gradient(
-            rgba(7,43,65,.82),
-            rgba(10,60,83,.90)
-        ),
-        url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80");
-
-    background-size: cover;
-
-    background-position: center;
+            145deg,
+            #072b41,
+            #0a3c53
+        );
 
     color: white;
 
@@ -374,7 +335,6 @@ a {
         0 25px 60px rgba(6,38,58,.18);
 
 }
-
 
 .panel-top {
 
@@ -387,7 +347,6 @@ a {
     margin-bottom: 25px;
 
 }
-
 
 .panel-icon {
 
@@ -408,7 +367,6 @@ a {
 
 }
 
-
 .panel-top span {
 
     color: var(--green);
@@ -421,13 +379,9 @@ a {
 
 }
 
-
 .hero-panel h2 {
-
     font-size: 28px;
-
 }
-
 
 .hero-panel > p {
 
@@ -437,17 +391,16 @@ a {
 
 }
 
-
 .quick-options {
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        1fr 1fr;
 
     gap: 10px;
 
 }
-
 
 .quick-options button {
 
@@ -459,7 +412,8 @@ a {
 
     padding: 15px;
 
-    border: 1px solid
+    border:
+        1px solid
         rgba(255,255,255,.09);
 
     border-radius: 12px;
@@ -473,18 +427,12 @@ a {
 
 }
 
-
 .quick-options button:hover {
-
     background: var(--green);
-
 }
 
-
 .quick-options span {
-
     font-size: 20px;
-
 }
 
 
@@ -502,7 +450,6 @@ a {
 
 }
 
-
 .section-heading {
 
     max-width: 700px;
@@ -513,7 +460,6 @@ a {
     text-align: center;
 
 }
-
 
 .section-heading > span {
 
@@ -526,7 +472,6 @@ a {
     letter-spacing: 1.5px;
 
 }
-
 
 .section-heading h2 {
 
@@ -542,7 +487,6 @@ a {
 
 }
 
-
 .section-heading p {
 
     margin-top: 12px;
@@ -550,7 +494,6 @@ a {
     color: var(--muted);
 
 }
-
 
 .services-grid {
 
@@ -572,7 +515,7 @@ a {
 
     position: relative;
 
-    min-height: 410px;
+    min-height: 470px;
 
     padding: 30px;
 
@@ -583,12 +526,13 @@ a {
 
     background: white;
 
+    overflow: hidden;
+
     transition:
         transform .25s,
         box-shadow .25s;
 
 }
-
 
 .service-card:hover {
 
@@ -601,22 +545,21 @@ a {
 
 
 /* =====================================================
-   IMAGENES DE SERVICIOS
+   IMÁGENES DE LAS TARJETAS
 ===================================================== */
 
-.service-icon {
+.service-card::before {
 
-    width: 100%;
+    content: "";
+
+    display: block;
+
+    width: calc(100% + 60px);
 
     height: 170px;
 
-    display: grid;
-
-    place-items: center;
-
-    border-radius: 16px;
-
-    font-size: 40px;
+    margin:
+        -30px -30px 0;
 
     background-size: cover;
 
@@ -624,34 +567,31 @@ a {
 
     background-repeat: no-repeat;
 
-    margin-bottom: 10px;
+    border-radius:
+        22px 22px 0 0;
+
+    transition:
+        transform .35s ease,
+        filter .35s ease;
 
 }
 
 
 /* AUTO */
 
-.auto-icon {
+.service-card:nth-child(1)::before {
 
     background-image:
-        linear-gradient(
-            rgba(6,38,58,.25),
-            rgba(6,38,58,.25)
-        ),
-        url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=80");
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80");
 
 }
 
 
 /* MOTO */
 
-.moto-icon {
+.service-card:nth-child(2)::before {
 
     background-image:
-        linear-gradient(
-            rgba(6,38,58,.25),
-            rgba(6,38,58,.25)
-        ),
         url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=80");
 
 }
@@ -659,65 +599,109 @@ a {
 
 /* HOGAR */
 
-.hogar-icon {
+.service-card:nth-child(3)::before {
 
     background-image:
-        linear-gradient(
-            rgba(6,38,58,.20),
-            rgba(6,38,58,.20)
-        ),
-        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80");
+        url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80");
 
 }
 
 
 /* VIDA */
 
-.vida-icon {
+.service-card:nth-child(4)::before {
 
     background-image:
-        linear-gradient(
-            rgba(6,38,58,.20),
-            rgba(6,38,58,.20)
-        ),
-        url("https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=80");
+        url("https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=900&q=80");
 
 }
 
 
 /* OBJETOS */
 
-.objetos-icon {
+.service-card:nth-child(5)::before {
 
     background-image:
-        linear-gradient(
-            rgba(6,38,58,.20),
-            rgba(6,38,58,.20)
-        ),
-        url("https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=900&q=80");
+        url("https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80");
 
 }
 
 
 /* COMERCIO */
 
-.comercio-icon {
+.service-card:nth-child(6)::before {
 
     background-image:
-        linear-gradient(
-            rgba(6,38,58,.20),
-            rgba(6,38,58,.20)
-        ),
-        url("https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=900&q=80");
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80");
 
 }
 
+
+.service-card:hover::before {
+
+    transform: scale(1.03);
+
+    filter: brightness(1.08);
+
+}
+
+
+/* =====================================================
+   ICONOS DE SERVICIOS
+===================================================== */
+
+.service-icon {
+
+    width: 56px;
+
+    height: 56px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-top: 22px;
+
+    border-radius: 16px;
+
+    font-size: 27px;
+
+}
+
+.auto-icon {
+    background: #eaf4ff;
+}
+
+.moto-icon {
+    background: #fff4e8;
+}
+
+.hogar-icon {
+    background: #edf9ee;
+}
+
+.vida-icon {
+    background: #fff0f6;
+}
+
+.objetos-icon {
+    background: #f0efff;
+}
+
+.comercio-icon {
+    background: #eaf8f5;
+}
+
+
+/* =====================================================
+   NÚMERO
+===================================================== */
 
 .service-number {
 
     position: absolute;
 
-    top: 30px;
+    top: 205px;
 
     right: 30px;
 
@@ -730,6 +714,10 @@ a {
 }
 
 
+/* =====================================================
+   CONTENIDO TARJETAS
+===================================================== */
+
 .service-card h3 {
 
     margin-top: 22px;
@@ -739,7 +727,6 @@ a {
     font-size: 23px;
 
 }
-
 
 .service-card > p {
 
@@ -754,13 +741,9 @@ a {
 
 }
 
-
 .service-card ul {
-
     list-style: none;
-
 }
-
 
 .service-card li {
 
@@ -773,7 +756,6 @@ a {
 
 }
 
-
 .service-card li::before {
 
     content: "✓";
@@ -785,7 +767,6 @@ a {
     font-weight: 900;
 
 }
-
 
 .card-button {
 
@@ -803,7 +784,6 @@ a {
 
 }
 
-
 .card-button span {
 
     margin-left: 5px;
@@ -812,11 +792,8 @@ a {
 
 }
 
-
 .card-button:hover {
-
     color: var(--green-dark);
-
 }
 
 
@@ -848,7 +825,6 @@ a {
 
 }
 
-
 .about-content > span {
 
     color: var(--green);
@@ -860,7 +836,6 @@ a {
     letter-spacing: 1.5px;
 
 }
-
 
 .about h2 {
 
@@ -877,7 +852,6 @@ a {
 
 }
 
-
 .about-content p {
 
     max-width: 550px;
@@ -885,7 +859,6 @@ a {
     color: #abc0cd;
 
 }
-
 
 .about-steps {
 
@@ -898,7 +871,6 @@ a {
 
 }
 
-
 .about-steps div {
 
     padding: 25px 15px;
@@ -909,7 +881,6 @@ a {
         rgba(255,255,255,.06);
 
 }
-
 
 .about-steps strong {
 
@@ -923,11 +894,8 @@ a {
 
 }
 
-
 .about-steps p {
-
     color: white;
-
 }
 
 
@@ -959,7 +927,6 @@ a {
 
 }
 
-
 .modal-overlay.active {
 
     display: flex;
@@ -968,7 +935,6 @@ a {
         fadeIn .2s ease;
 
 }
-
 
 @keyframes fadeIn {
 
@@ -981,7 +947,6 @@ a {
     }
 
 }
-
 
 .modal {
 
@@ -1005,7 +970,6 @@ a {
         0 30px 80px rgba(0,0,0,.28);
 
 }
-
 
 .close-modal {
 
@@ -1031,11 +995,8 @@ a {
 
 }
 
-
 .close-modal:hover {
-
     background: #dfe8ed;
-
 }
 
 
@@ -1054,7 +1015,6 @@ a {
     padding-right: 35px;
 
 }
-
 
 .big-modal-icon {
 
@@ -1076,7 +1036,6 @@ a {
 
 }
 
-
 .comercio-title > div:last-child > span {
 
     color: var(--green-dark);
@@ -1088,7 +1047,6 @@ a {
     letter-spacing: 1.4px;
 
 }
-
 
 .comercio-title h2 {
 
@@ -1102,7 +1060,6 @@ a {
 
 }
 
-
 .modal-intro {
 
     margin:
@@ -1112,7 +1069,6 @@ a {
 
 }
 
-
 .exterior-services {
 
     display: grid;
@@ -1120,7 +1076,6 @@ a {
     gap: 12px;
 
 }
-
 
 .exterior-card {
 
@@ -1142,7 +1097,6 @@ a {
 
 }
 
-
 .exterior-icon {
 
     width: 44px;
@@ -1161,7 +1115,6 @@ a {
 
 }
 
-
 .exterior-card h3 {
 
     color: var(--navy);
@@ -1169,7 +1122,6 @@ a {
     font-size: 15px;
 
 }
-
 
 .exterior-card p {
 
@@ -1180,7 +1132,6 @@ a {
     font-size: 12px;
 
 }
-
 
 .exterior-card button {
 
@@ -1200,13 +1151,9 @@ a {
 
 }
 
-
 .exterior-card button:hover {
-
     background: var(--green-dark);
-
 }
-
 
 .contact-box {
 
@@ -1227,7 +1174,6 @@ a {
 
 }
 
-
 .contact-box h3 {
 
     width: 100%;
@@ -1237,7 +1183,6 @@ a {
     font-size: 15px;
 
 }
-
 
 .contact-box a {
 
@@ -1249,11 +1194,8 @@ a {
 
 }
 
-
 .contact-box a:hover {
-
     color: var(--green-dark);
-
 }
 
 
@@ -1262,11 +1204,8 @@ a {
 ===================================================== */
 
 .quote-modal {
-
     max-width: 520px;
-
 }
-
 
 .quote-icon {
 
@@ -1288,7 +1227,6 @@ a {
 
 }
 
-
 .quote-label {
 
     color: var(--green-dark);
@@ -1301,7 +1239,6 @@ a {
 
 }
 
-
 .quote-modal h2 {
 
     margin-top: 7px;
@@ -1312,7 +1249,6 @@ a {
 
 }
 
-
 .quote-modal > p {
 
     margin-top: 10px;
@@ -1320,7 +1256,6 @@ a {
     color: var(--muted);
 
 }
-
 
 .selected-type {
 
@@ -1339,7 +1274,6 @@ a {
 
 }
 
-
 .dynamic-fields {
 
     display: grid;
@@ -1351,13 +1285,9 @@ a {
 
 }
 
-
 .field {
-
     margin-bottom: 15px;
-
 }
-
 
 .field label {
 
@@ -1373,7 +1303,6 @@ a {
 
 }
 
-
 .field label small {
 
     color: #91a1ab;
@@ -1381,7 +1310,6 @@ a {
     font-weight: 400;
 
 }
-
 
 .field input,
 .field select,
@@ -1406,7 +1334,6 @@ a {
 
 }
 
-
 .field textarea {
 
     min-height: 85px;
@@ -1414,7 +1341,6 @@ a {
     resize: vertical;
 
 }
-
 
 .field input:focus,
 .field select:focus,
@@ -1428,13 +1354,9 @@ a {
 
 }
 
-
 .hidden {
-
     display: none !important;
-
 }
-
 
 .send-whatsapp {
 
@@ -1456,13 +1378,9 @@ a {
 
 }
 
-
 .send-whatsapp:hover {
-
     background: var(--green-dark);
-
 }
-
 
 .modal-note {
 
@@ -1495,7 +1413,6 @@ footer {
 
 }
 
-
 .footer-logo {
 
     font-size: 21px;
@@ -1504,13 +1421,9 @@ footer {
 
 }
 
-
 .footer-logo strong {
-
     color: var(--green);
-
 }
-
 
 footer > p {
 
@@ -1519,7 +1432,6 @@ footer > p {
     color: #91a7b5;
 
 }
-
 
 .footer-links {
 
@@ -1535,7 +1447,6 @@ footer > p {
 
 }
 
-
 .footer-links a,
 .footer-links span {
 
@@ -1544,7 +1455,6 @@ footer > p {
     font-size: 13px;
 
 }
-
 
 .copyright {
 
@@ -1562,11 +1472,8 @@ footer > p {
 @media (max-width: 950px) {
 
     .nav {
-
         display: none;
-
     }
-
 
     .hero {
 
@@ -1576,14 +1483,12 @@ footer > p {
 
     }
 
-
     .services-grid {
 
         grid-template-columns:
             repeat(2, 1fr);
 
     }
-
 
     .about {
 
@@ -1605,22 +1510,18 @@ footer > p {
 
     }
 
-
     .logo {
-
         font-size: 18px;
-
     }
-
 
     .btn-whatsapp {
 
-        padding: 10px 14px;
+        padding:
+            10px 14px;
 
         font-size: 12px;
 
     }
-
 
     .hero {
 
@@ -1628,7 +1529,6 @@ footer > p {
             50px 20px;
 
     }
-
 
     .hero h1 {
 
@@ -1638,20 +1538,13 @@ footer > p {
 
     }
 
-
     .hero-content > p {
-
         font-size: 16px;
-
     }
-
 
     .hero-panel {
-
         padding: 25px;
-
     }
-
 
     .services {
 
@@ -1660,62 +1553,37 @@ footer > p {
 
     }
 
-
     .section-heading h2 {
-
         font-size: 31px;
-
     }
-
 
     .services-grid {
-
         grid-template-columns: 1fr;
-
     }
 
-
-    .service-icon {
-
+    .service-card::before {
         height: 190px;
-
     }
-
 
     .about {
-
         padding: 35px 25px;
-
     }
-
 
     .about h2 {
-
         font-size: 31px;
-
     }
-
 
     .about-steps {
-
         grid-template-columns: 1fr;
-
     }
-
 
     .modal {
-
         padding: 25px 20px;
-
     }
-
 
     .comercio-title h2 {
-
         font-size: 23px;
-
     }
-
 
     .exterior-card {
 
@@ -1723,7 +1591,6 @@ footer > p {
             42px 1fr;
 
     }
-
 
     .exterior-card button {
 
@@ -1733,11 +1600,8 @@ footer > p {
 
     }
 
-
     .dynamic-fields {
-
         grid-template-columns: 1fr;
-
     }
 
 }
@@ -1755,7 +1619,8 @@ footer > p {
 
     margin-left: 10px;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
     border-radius: 50%;
 
@@ -1778,7 +1643,6 @@ footer > p {
         border-color .25s;
 
 }
-
 
 .theme-toggle:hover {
 
@@ -1816,7 +1680,9 @@ body.dark-mode {
 }
 
 
-/* HEADER */
+/* =====================================================
+   DARK HEADER
+===================================================== */
 
 body.dark-mode .header {
 
@@ -1828,31 +1694,24 @@ body.dark-mode .header {
 
 }
 
-
 body.dark-mode .logo {
-
     color: #f1f7fa;
-
 }
-
 
 body.dark-mode .nav a,
 body.dark-mode .nav-comercio {
-
     color: #b7c6cf;
-
 }
-
 
 body.dark-mode .nav a:hover,
 body.dark-mode .nav-comercio:hover {
-
     color: var(--green);
-
 }
 
 
-/* BOTÓN MODO OSCURO */
+/* =====================================================
+   DARK THEME BUTTON
+===================================================== */
 
 body.dark-mode .theme-toggle {
 
@@ -1865,14 +1724,13 @@ body.dark-mode .theme-toggle {
 }
 
 
-/* HERO */
+/* =====================================================
+   DARK HERO
+===================================================== */
 
 body.dark-mode .hero-content > p {
-
     color: #aab9c4;
-
 }
-
 
 body.dark-mode .badge {
 
@@ -1881,7 +1739,6 @@ body.dark-mode .badge {
     color: #42e0ad;
 
 }
-
 
 body.dark-mode .btn-secondary {
 
@@ -1893,29 +1750,22 @@ body.dark-mode .btn-secondary {
 
 }
 
-
 body.dark-mode .btn-secondary:hover {
-
     background: #24333e;
-
 }
 
 
-/* SERVICES */
+/* =====================================================
+   DARK SERVICES
+===================================================== */
 
 body.dark-mode .section-heading h2 {
-
     color: #f1f7fa;
-
 }
-
 
 body.dark-mode .section-heading p {
-
     color: #aab9c4;
-
 }
-
 
 body.dark-mode .service-card {
 
@@ -1925,52 +1775,59 @@ body.dark-mode .service-card {
 
 }
 
-
 body.dark-mode .service-card h3 {
-
     color: #f1f7fa;
-
 }
-
 
 body.dark-mode .service-card > p {
-
     color: #aab9c4;
-
 }
-
 
 body.dark-mode .service-card li {
-
     color: #b8c7cf;
-
 }
-
 
 body.dark-mode .service-number {
-
     color: #718591;
-
 }
-
 
 body.dark-mode .card-button {
-
     color: #f1f7fa;
-
 }
 
 
-/* IMAGENES EN MODO OSCURO */
+/* =====================================================
+   DARK ICONOS
+===================================================== */
 
-body.dark-mode .service-icon {
+body.dark-mode .auto-icon {
+    background: #1d3447;
+}
 
-    filter: brightness(.78);
+body.dark-mode .moto-icon {
+    background: #453421;
+}
 
+body.dark-mode .hogar-icon {
+    background: #203a29;
+}
+
+body.dark-mode .vida-icon {
+    background: #432b38;
+}
+
+body.dark-mode .objetos-icon {
+    background: #302d4b;
+}
+
+body.dark-mode .comercio-icon {
+    background: #1d3935;
 }
 
 
-/* MODALES */
+/* =====================================================
+   DARK MODALES
+===================================================== */
 
 body.dark-mode .modal {
 
@@ -1980,7 +1837,6 @@ body.dark-mode .modal {
 
 }
 
-
 body.dark-mode .close-modal {
 
     background: #263640;
@@ -1989,15 +1845,14 @@ body.dark-mode .close-modal {
 
 }
 
-
 body.dark-mode .close-modal:hover {
-
     background: #354752;
-
 }
 
 
-/* FORMULARIOS */
+/* =====================================================
+   DARK FORMULARIOS
+===================================================== */
 
 body.dark-mode input,
 body.dark-mode select,
@@ -2011,23 +1866,19 @@ body.dark-mode textarea {
 
 }
 
-
 body.dark-mode input::placeholder,
 body.dark-mode textarea::placeholder {
-
     color: #71838f;
-
 }
-
 
 body.dark-mode .field label {
-
     color: #edf5f8;
-
 }
 
 
-/* COMERCIO */
+/* =====================================================
+   DARK COMERCIO
+===================================================== */
 
 body.dark-mode .comercio-item {
 
@@ -2038,27 +1889,21 @@ body.dark-mode .comercio-item {
 }
 
 
-/* FOOTER */
+/* =====================================================
+   DARK FOOTER
+===================================================== */
 
 body.dark-mode footer {
-
     background: #0b1218;
-
 }
-
 
 body.dark-mode footer > p {
-
     color: #91a7b5;
-
 }
-
 
 body.dark-mode .footer-links a,
 body.dark-mode .footer-links span {
-
     color: #b9c8d0;
-
 }
 
 
